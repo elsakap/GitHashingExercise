@@ -1,0 +1,7 @@
+#!/bin/bash 
+
+echo "Enter the last 4 digits of your AEM: "
+read number 
+echo -n "$number" | sha256sum | awk '{print $1}' > hash_output.txt 
+echo "Hash saved to hash_output.txt"
+
